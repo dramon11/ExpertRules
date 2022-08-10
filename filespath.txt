@@ -1,0 +1,27 @@
+Rule {
+	Process {
+		Include OBJECT_NAME {
+			-v *
+		}
+	}
+	Target {
+		Match FILE {
+			Include OBJECT_NAME {
+				-v "C:\ProgramData\1.msi"
+				-v "C:\ProgramData\1.dll"
+				-v "C:\Windows\sv.exe"
+				-v "C:\Windows\svchost.conf"
+				-v "C:\Users\Public\Report_18.xls"
+				-v "C:\Users\Public\x86_16.dll"
+				-v "C:\Users\<user>\AppData\Roaming\Microsoft\Abevi\<random characters>.dll"
+				-v "C:\Users\Public\AdFind.exe"
+				-v "Restore-My-Files.txt"
+				-v "CONTI.txt"
+				-v "R3ADM3.txt"
+				-v "readme.txt"
+				-v "CONTI_README.txt"
+			}
+			Include -access "EXECUTE READ CREATE"
+		}
+	}
+}
